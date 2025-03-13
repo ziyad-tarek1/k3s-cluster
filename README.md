@@ -45,12 +45,11 @@ A lightweight Kubernetes cluster setup using K3s, automated with Vagrant for loc
 
 | Node Name     | IP Address      | Role    | CPU | Memory |
 |---------------|-----------------|---------|-----|--------|
-| controlplane  | 192.168.56.101  | Master  | 2   | 2GB    |
-| node01        | 192.168.56.102  | Worker  | 2   | 1GB    |
-| node02        | 192.168.56.103  | Worker  | 2   | 1GB    |
+| controlplane1  | 192.168.56.101  | Master  | 2   | 2GB    |
+| node011        | 192.168.56.102  | Worker  | 2   | 1GB    |
+| node022        | 192.168.56.103  | Worker  | 2   | 1GB    |
 
-**Default K3s Token**: `your_secure_token_here` (change in Vagrantfile)  
-**Kubeconfig Location**: `/etc/rancher/k3s/k3s.yaml` on controlplane node
+
 
 ## Usage
 
