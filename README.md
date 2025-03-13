@@ -139,7 +139,11 @@ vagrant ssh node01
    # In bootstrap_master.sh
    INSTALL_K3S_EXEC="--disable=traefik --write-kubeconfig-mode 644"
    ```
+## After setting up your cluster enable kubectl autocompletion from the below link
 
+```bash
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+```
 ## Security Note
 This setup is configured for **development purposes only**. For production use:
 - Rotate the default K3s token
