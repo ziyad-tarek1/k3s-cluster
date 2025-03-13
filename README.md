@@ -114,7 +114,23 @@ vagrant ssh node01
    systemctl status systemd-resolved
    cat /etc/resolv.conf
    ```
-
+4. **Login into the K3s-master node and run the below commands**
+   ```bash
+    curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--disable=traefik" sh -
+    sudo chown vagrant:vagrant /etc/rancher/k3s/k3s.yaml
+   ```
+5. **copy the Token**
+    ```bash
+     sudo cat /var/lib/rancher/k3s/server/node-token
+   ```
+6. **Login into both the worker nodes**
+    ```bash
+     curl -sfL https://get.k3s.io | K3S_URL=https://192.168.56.101:6443 K3S_TOKEN=(Token copied from the master node[step 5) sh -
+   ```
+7. **can be verified**
+    ```bash
+     kubectl get nodes
+   ```
 ### Log Locations
 - Master node: `journalctl -u k3s`
 - Worker nodes: `journalctl -u k3s-agent`
